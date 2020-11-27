@@ -1,7 +1,7 @@
 .promo {
 	min-height: 650px;
 	padding: 21px 0 93px 0;
-	background: url(../../img/bg1.jpg) center (center/cover) no-repeat;
+	background: url(../img/bg1.jpg) center (center/cover) no-repeat;
 	&__wrapper {
 		margin-top: 90px;
 		display: flex;
@@ -9,19 +9,23 @@
 		align-items: flex-end;
 	}
 	&__header {
+		margin-bottom: 0;
 		color: $color-white;
 		font-size: 42px;
 		line-height: 42px;
 		font-weight: 700;
 		text-transform: uppercase;
+		text-align: center;
 	}
 	&__subheader {
 		margin-top: 17px;
+		margin-bottom: 0;
 		color: $color-white;
 		font-size: 24px;
 		line-height: 24px;
 		font-weight: 500;
 		text-transform: uppercase;
+		text-align: center;
 	}
 	&__icons {
 		margin-top: 66px;
@@ -29,7 +33,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	&_icon {
+	&__icon {
 		width: 108px;
 		text-align: center;
 		color: $color-white;
