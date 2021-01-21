@@ -61,6 +61,18 @@
 			font-size: 22px;
 		}
 	}
+	.consultation {
+		.title {
+			font-size: 30px;
+			text-align: center;
+		}
+		&__desc {
+			text-align: center;
+		}
+		.feed-form {
+			margin: 36px auto 0 auto;
+		}
+	}
 }
 
 @media (max-width: 575px){
