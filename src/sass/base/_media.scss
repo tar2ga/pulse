@@ -1,3 +1,21 @@
+@media (max-width: 1140px) {
+	.carousel {
+		width: 100%;
+		&__inner {
+			img {
+				width: 70%;
+			}
+		}
+		.prev, .next {
+			left: -46px;
+		}
+		.next {
+			right: -46px;
+			left: auto;
+		}
+	}
+}
+
 @media (max-width: 1024px) {
 	.promo {
 		background-position: right;
@@ -71,6 +89,20 @@
 		}
 		.feed-form {
 			margin: 36px auto 0 auto;
+		}
+	}
+	.carousel {
+		&__inner {
+			img {
+				width: 70%;
+			}
+		}
+		.prev, .next {
+			left: 10px;
+		}
+		.next {
+			right: 10px;
+			left: auto;
 		}
 	}
 }
