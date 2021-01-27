@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){//когда документ загружен
 	// $('.carousel__inner').slick({
 	// 	speed: 1200,
 	// 	//adaptiveHeight: true,
@@ -50,7 +50,31 @@ $(document).ready(function(){
 	toggleSlide('.catalog-item__link');
 	toggleSlide('.catalog-item__back');
 
-  });
+
+	//Modal
+	$('[data-modal=consultation]')//получаем элементы по data атрибуту
+		.on('click', function() {
+			$('.overlay, #consultation')//находим элемент c классом overlay и элемент с id #consultation
+				.fadeIn();//анимированное появление
+		});
+	$('.modal__close').on('click', function() {
+		console.log($(this));
+		$('.overlay, #consultation, #order, #thanks')
+			.fadeOut();//анимированное исчезновение
+	});
+
+	$('.button_mini').each(function(i) {
+		 $(this).on('click', function(){
+			$('#order .modal__desc')//для элемента с id order и классом modal__desc
+			.text(//устанавливаем текст
+				$('.catalog-item__subtitle')
+					.eq(i).text()
+			)
+
+			$('.overlay, #order').fadeIn();
+		 });
+	})
+});
 
 //tiny-slider
 const slider = tns({

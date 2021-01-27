@@ -298,4 +298,14 @@
 			}
 		}
 	}
+	.modal {
+		&__close {
+			right: 0;
+		}
+		width: 80%;
+		padding: 18px 20px 20px 20px;
+		.feed-form {
+			width: 100%;
+		}
+	}
 }
