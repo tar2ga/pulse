@@ -119,6 +119,24 @@ $(document).ready(function(){//когда документ загружен
 
 		return false;
 	})
+
+	//показываем и скрываем кнопку pageup
+	$(window)//страница браузера
+		.scroll(function() {//при скроле
+			if($(this).scrollTop() > 1600){
+				$('.pageup').fadeIn();
+			} else {
+				$('.pageup').fadeOut();
+			}
+		});
+
+	//плавный скрол вверх
+	$("a[href^='#']")//находим все ссылки у которых атрибут href начинается с решётки
+	.click(function(){
+		const _href = $(this).attr("href");//получаем значение атрибута href
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});
 });
 
 //tiny-slider
