@@ -102,6 +102,23 @@ $(document).ready(function(){//когда документ загружен
 
 	$('input[name=phone]')//для элемента input, у которого атрибут name равен 'phone'
 		.mask("+7 (999) 999-99-99");
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST", //отдаём данные серверу
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {//при завершении операции
+			$(this).find("input").val("")//очищаем все импуты
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn();
+
+			$('form').trigger('reset');//очищаем все формы
+		});
+
+		return false;
+	})
 });
 
 //tiny-slider
