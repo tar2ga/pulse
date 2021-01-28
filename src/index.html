@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<!-- <link rel="stylesheet" href="css/slick.css">  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+	<link rel="stylesheet" href="css/animate.css"/>
 
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -120,7 +121,8 @@
 		</div>
 	</section>
 
-	<section class="carousel">
+	<!-- carousel раньше была section, но в section должен быть тег h2-h6, поэтому меняем на div -->
+	<div class="carousel">
 		<div class="container">
 			<div class="carousel__inner">
 				<div>
@@ -133,10 +135,10 @@
 					<img src="img/pulse-3.jpg" alt="pulse-3">
 				</div>
 			</div>
-			<button type="button" class="prev"><img src="icons/left.svg"></button>
-			<button type="button" class="next"><img src="icons/right.svg"></button>
+			<button type="button" class="prev"><img src="icons/left.svg" alt="left"></button>
+			<button type="button" class="next"><img src="icons/right.svg" alt="right"></button>
 		</div>
-	</section>
+	</div>
 
 	<section class="catalog">
 		<div class="container">
@@ -405,7 +407,8 @@
 	<section class="feedback">
 		<div class="container">
 			<h2 class="title">отзывы клиентов</h2>
-			<div class="feedback__item">
+			<!-- wow это wow.min.js - анимация срабатывает при скроле перед элементом -->
+			<div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
 				<img src="img/feed-irina.png" alt="feedback1" class="feedback__img">
 				<div class="feedback__text">
 					<div class="feedback__title">Ирина Иванченко</div>
@@ -419,7 +422,7 @@
 						</div>
 				</div>
 			</div>
-			<div class="feedback__item">
+			<div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
 				<img src="img/feed-ivan.png" alt="feedback2" class="feedback__img">
 				<div class="feedback__text">
 					<div class="feedback__title">Иван Сёмочкин</div>
@@ -431,7 +434,7 @@
 						</div>
 				</div>
 			</div>
-			<div class="feedback__item">
+			<div class="feedback__item wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
 				<img src="img/feed-julia.png" alt="feedback3" class="feedback__img">
 				<div class="feedback__text">
 					<div class="feedback__title">Юлия Дашкина</div>
@@ -449,7 +452,7 @@
 
 	<footer class="footer">
 		<!-- google -->
-		<iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430481195992!2d37.644807315931104!3d55.76839498055754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1611668099536!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430481195992!2d37.644807315931104!3d55.76839498055754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1611668099536!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 		<!-- yandex iframe-->
 		<!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A623a5b0f1f5feeb33c802c1270c62f513c58b1571261d66ed1c88132c8576dc1&amp;source=constructor" width="100%" height="630" frameborder="0"></iframe> -->
@@ -523,6 +526,7 @@
 
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

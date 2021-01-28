@@ -131,12 +131,16 @@ $(document).ready(function(){//когда документ загружен
 		});
 
 	//плавный скрол вверх
-	$("a[href^='#']")//находим все ссылки у которых атрибут href начинается с решётки
+	// $("a[href^='#']")//находим все ссылки у которых атрибут href начинается с решётки
+	$("a[href='#up']")
 	.click(function(){
 		const _href = $(this).attr("href");//получаем значение атрибута href
 		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
 		return false;
 	});
+
+	//wow.min.js
+	new WOW().init();
 });
 
 //tiny-slider

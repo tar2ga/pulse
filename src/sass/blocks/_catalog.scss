@@ -134,14 +134,14 @@
 			transform: translateX(-100%);
 			transition: 0.5s all;
 			.catalog-item__desc {
-				font-size: 12px; //у третьего пульсометра вылезает текст при нажатии "Подробнее"
-				line-height: 21px;
+				color: $color-white; //у третьего пульсометра вылезает текст при нажатии "Подробнее"
+				font-size: 14px;
 			}
 			&_active {
 				transform: translateX(0%);
 				margin-right: 20px;
 				.catalog-item__desc {
-					font-size: 14px; //у третьего пульсометра вылезает текст при нажатии "Подробнее"
+					color: #0d0d0d; //у третьего пульсометра вылезает текст при нажатии "Подробнее"
 				}
 			}
 		}
